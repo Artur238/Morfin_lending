@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="basket" x1="37" y1="39" x2="96" y2="91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75C8FF"/>
+      <stop offset=".44" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="basketSide" x1="46" y1="45" x2="92" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D9FFF"/>
+      <stop offset="1" stop-color="#064BCF"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="18" y1="22" x2="43" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A2DDFF"/>
+      <stop offset=".48" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="wheel" x1="54" y1="99" x2="85" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset=".48" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="39" y1="43" x2="77" y2="77" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.06  0 0 0 0 0.39  0 0 0 0 1  0 0 0 .78 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#blueGlow)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Handle and frame -->
+    <path d="M17 20h8.5c3.2 0 5.9 2.2 6.6 5.3l3.1 13.2"
+      stroke="url(#handle)" stroke-width="7"/>
+    <path d="M17 20h8.5c3.2 0 5.9 2.2 6.6 5.3"
+      stroke="#BDEAFF" stroke-opacity=".72" stroke-width="2.1"/>
+    <path d="M31.5 30.5h9.2" stroke="#5DB9FF" stroke-width="5"/>
+    <path d="m35 38 8.2 48.1c.6 3.6 3.7 6.2 7.3 6.2h43.2"
+      stroke="url(#handle)" stroke-width="7"/>
+    <path d="m35 38 8.2 48.1c.6 3.6 3.7 6.2 7.3 6.2"
+      stroke="#BDEAFF" stroke-opacity=".45" stroke-width="2"/>
+
+    <!-- Shopping basket -->
+    <path d="M39 42h70l-10.5 39.2c-.8 2.9-3.4 4.9-6.4 4.9H49.4L39 42Z"
+      fill="url(#basket)" stroke="#68C0FF" stroke-width="2.3"/>
+    <path d="M45.5 48h56.3l-8.1 29.7H51.1L45.5 48Z"
+      fill="url(#basketSide)" opacity=".7"/>
+    <path d="M43 47h58.8l-3.8 14H46.1L43 47Z"
+      fill="url(#shine)" opacity=".55"/>
+    <!-- Basket grid -->
+    <path d="m59 45 4.2 37M78 45l-1.1 37M97 45l-6.2 37"
+      stroke="#C4E9FF" stroke-opacity=".56" stroke-width="2"/>
+    <path d="M42.5 60h61.2M46.5 75h53.2"
+      stroke="#C4E9FF" stroke-opacity=".5" stroke-width="2"/>
+    <!-- Basket rim highlight -->
+    <path d="M40 42h68" stroke="#C8EDFF" stroke-width="2.3" stroke-opacity=".9"/>
+
+    <!-- Wheels -->
+    <path d="M56 94v5M89 94v5" stroke="#278BFF" stroke-width="5"/>
+    <circle cx="55.5" cy="109" r="8.5" fill="url(#wheel)" stroke="#75C8FF" stroke-width="2"/>
+    <circle cx="89.5" cy="109" r="8.5" fill="url(#wheel)" stroke="#75C8FF" stroke-width="2"/>
+    <circle cx="55.5" cy="109" r="2.4" fill="#D7F2FF" fill-opacity=".8"/>
+    <circle cx="89.5" cy="109" r="2.4" fill="#D7F2FF" fill-opacity=".8"/>
+  </g>
+</svg>

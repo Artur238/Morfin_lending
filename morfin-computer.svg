@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="screenFrame" x1="28" y1="18" x2="100" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75C8FF"/>
+      <stop offset=".42" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="screenGlass" x1="38" y1="28" x2="91" y2="83" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153C78"/>
+      <stop offset=".55" stop-color="#0D2450"/>
+      <stop offset="1" stop-color="#07142D"/>
+    </linearGradient>
+    <linearGradient id="stand" x1="49" y1="88" x2="82" y2="119" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#70C5FF"/>
+      <stop offset=".45" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="37" y1="24" x2="91" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.06  0 0 0 0 0.39  0 0 0 0 1  0 0 0 .78 0"
+        result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#blueGlow)">
+    <!-- Monitor outer frame -->
+    <path d="M20 25.5C20 19.7 24.7 15 30.5 15h67C103.3 15 108 19.7 108 25.5v54c0 5.8-4.7 10.5-10.5 10.5h-67C24.7 90 20 85.3 20 79.5v-54Z"
+      fill="url(#screenFrame)" stroke="#72C5FF" stroke-width="2.2"/>
+    <!-- Screen inset -->
+    <path d="M28 27.5c0-2.5 2-4.5 4.5-4.5h63c2.5 0 4.5 2 4.5 4.5v49c0 2.5-2 4.5-4.5 4.5h-63c-2.5 0-4.5-2-4.5-4.5v-49Z"
+      fill="url(#screenGlass)"/>
+    <path d="M32.5 23h63c2.5 0 4.5 2 4.5 4.5v12L28 67V27.5c0-2.5 2-4.5 4.5-4.5Z"
+      fill="url(#highlight)" opacity=".36"/>
+    <!-- Screen reflection -->
+    <path d="M31 28h65" stroke="#BDE9FF" stroke-opacity=".48" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- Stand -->
+    <path d="M57 91h14l3.5 18h-21L57 91Z" fill="url(#stand)" stroke="#4BAAFF" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M42 111.5c0-2.5 2-4.5 4.5-4.5h35c2.5 0 4.5 2 4.5 4.5v1c0 2.5-2 4.5-4.5 4.5h-35c-2.5 0-4.5-2-4.5-4.5v-1Z"
+      fill="url(#stand)" stroke="#65BBFF" stroke-width="1.7"/>
+    <path d="M49 110h30" stroke="#C4E9FF" stroke-opacity=".5" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- Longer diagonal stem with a slightly more compact arrowhead -->
+  <path d="M5 19L19 5"
+        stroke="rgb(133, 157, 201)"
+        stroke-width="1.9"
+        stroke-linecap="round"/>
+  <path d="M13 5H19V11"
+        stroke="rgb(133, 157, 201)"
+        stroke-width="1.7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

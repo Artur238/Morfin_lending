@@ -1,0 +1,173 @@
+/* MORFIN — tablet and mobile layout overrides.
+   Keep reset.css and index.css; load this file after index.css. */
+
+* , *::before, *::after { box-sizing: border-box; }
+html { width: 100%; min-width: 320px; scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { width: 100%; min-width: 320px; margin: 0; overflow-x: hidden; }
+header, .banner, .offers, .about_me_block, footer { width: 100%; }
+.mobile_menu_button { display: none; }
+
+@media (max-width: 1024px) {
+  header { min-height: 68px; aspect-ratio: auto; padding: 0 24px; }
+  .header_logo { width: auto; height: auto; font-size: clamp(1.5rem, 2.5vw, 2rem); }
+  .header_list { width: 48%; }
+  .header_nav { gap: clamp(.8rem, 2vw, 1.5rem); }
+  .header_social { width: auto; }
+  .header_social_button { width: auto; min-height: 38px; padding: 0 14px; }
+
+  .banner { min-height: 500px; aspect-ratio: auto; padding: 34px 24px; }
+  .banner_left { width: 50%; height: auto; padding-left: 0; }
+  .banner_online_block { height: auto; margin-bottom: 16px; }
+  .banner_online--green { width: auto; min-height: 30px; padding: 0 12px; font-size: .75rem; }
+  .banner_title { height: auto; margin-bottom: 12px; font-size: clamp(4rem, 8vw, 5.5rem); line-height: 1; }
+  .banner_h2 { height: auto; padding-right: 10px; font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.2; }
+  .banner_article { height: auto; padding-right: 12px; margin: 14px 0 22px; font-size: .9rem; }
+  .banner_button_container { height: auto; }
+  .banner_button { width: min(250px, 90%); min-height: 48px; }
+  .banner_stack_block { height: auto; margin-top: 20px; }
+  .banner_stack_list { width: 100%; height: 42px; gap: 8px; }
+  .banner_stack { min-width: 0; aspect-ratio: auto; flex: 1; }
+  .banner_right { width: 50%; height: 390px; background-position: center; }
+
+  .offers { height: auto; aspect-ratio: auto; padding: 48px 24px; }
+  .offers_article_block { height: auto; margin: 0 0 24px; }
+  .offers_article_left_block, .offers_article_right_block { height: auto; }
+  .offers_title_left { height: auto; font-size: clamp(2rem, 4vw, 2.6rem); }
+  .offers_article_right { width: 90%; height: auto; font-size: .9rem; }
+  .offers_blocks_block { height: auto; gap: 12px; }
+  .offers_blocks_block > * { height: auto; gap: 12px; }
+  .offers_block { min-height: 112px; height: auto; padding: 12px 8px; }
+  .offers_svg_article_top { font-size: clamp(.85rem, 1.4vw, 1rem); }
+  .offers_svg_article_bottom { font-size: .75rem; }
+
+  .about_me_block { min-height: 360px; height: auto; aspect-ratio: auto; padding: 44px 24px; }
+  .about_me_left { height: auto; padding-left: 0; }
+  .about_me_title_article, .contact_title_article { height: auto; margin-top: 0; padding-bottom: 8px; }
+  .about_me_title, .contact_title { height: auto; font-size: clamp(2rem, 4vw, 2.6rem); }
+  .about_me_article_block { height: auto; margin-top: 18px; font-size: .9rem; }
+  .about_me_article_one, .about_me_article_two { height: auto; }
+  .about_me_stack_block { height: auto; width: min(88%, 330px); aspect-ratio: 2 / 1; margin: 0; }
+  .projects { min-height: 360px; }
+  .projects_article { height: auto; font-size: .9rem; }
+  .projects_button_block { height: auto; margin-top: 18px; }
+  .projects_button { min-height: 42px; width: min(190px, 70%); }
+  .projects_img_block { background-size: contain; }
+
+  .contact { min-height: 260px; aspect-ratio: auto; }
+  .contact_article_block { width: 34%; padding-left: 0; }
+  .contact_img { width: 58%; background-position: center; background-size: contain; }
+  .contact_button_block { width: 40%; }
+  .contact_button { width: 85%; min-height: 52px; }
+
+  footer { min-height: 76px; height: auto; aspect-ratio: auto; padding: 12px 24px; }
+  .footer_logo { width: auto; font-size: 1.6rem; }
+  footer .header_nav { width: auto; }
+  .footer_article { width: auto; font-size: .7rem; }
+}
+
+@media (max-width: 680px) {
+  html { scroll-padding-top: 70px; }
+  header { position: relative; z-index: 50; height: 66px; min-height: 66px; padding: 0 18px; gap: 12px; }
+  .header_logo { font-size: 1.55rem; }
+
+  .header_list { display: none; position: absolute; top: 100%; left: 0; width: 100%; height: auto; padding: 10px 18px 16px; background: rgba(8,11,18,.97); border-bottom: 1px solid rgba(142,169,214,.16); backdrop-filter: blur(18px); }
+  .header_list.is-open { display: block; }
+  .header_list .header_nav { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; width: 100%; height: auto; gap: 0; }
+  .header_list .nav_link { display: block; padding: 13px 4px; border-bottom: 1px solid rgba(142,169,214,.1); font-size: .9rem; }
+
+  .mobile_menu_button { display: flex; flex: 0 0 40px; width: 40px; height: 40px; padding: 0; margin-left: auto; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid rgba(142,169,214,.2); border-radius: 11px; background: rgba(13,20,33,.8); cursor: pointer; }
+  .mobile_menu_button span { display: block; width: 17px; height: 2px; border-radius: 2px; background: #dce8ff; transition: transform .2s ease; }
+  .mobile_menu_button[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .mobile_menu_button[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+  .header_social { width: auto; height: auto; }
+  .header_social_button { width: auto; min-height: 38px; padding: 0 10px; gap: 6px; font-size: .7rem; border-radius: 11px; }
+  .header_svg { width: 17px; height: 17px; }
+
+  .banner { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; width: 100%; min-height: 0; padding: 38px 18px 22px; aspect-ratio: auto; background: radial-gradient(ellipse at 80% 70%, rgba(14,72,177,.10), transparent 48%), linear-gradient(135deg,#080b12 30%,#090e1a 100%); }
+  .banner_left { width: 100%; height: auto; padding: 0; align-items: flex-start; }
+  .banner_online_block { width: 100%; height: auto; margin-bottom: 16px; }
+  .banner_online--green { width: auto; min-height: 30px; padding: 0 12px; gap: 8px; font-size: .72rem; }
+  .banner_online_circle { width: 8px; height: 8px; flex: 0 0 8px; }
+  .banner_title { width: 100%; height: auto; margin: 0 0 10px; font-size: clamp(4.2rem,18vw,5.4rem); line-height: 1; }
+  .banner_h2 { width: 100%; height: auto; padding: 0; font-size: clamp(1.55rem,7vw,2rem); line-height: 1.22; }
+  .banner_article { width: 100%; height: auto; padding: 0; margin: 14px 0 20px; font-size: .88rem; line-height: 1.6; }
+  .banner_button_container { width: 100%; height: auto; }
+  .banner_button { width: min(245px,100%); min-height: 49px; padding: 10px 14px; }
+  .banner_button_article { width: 100%; font-size: .9rem; }
+  .banner_stack_block { width: 100%; height: auto; margin-top: 18px; }
+  .banner_stack_list { width: 100%; height: 42px; gap: 7px; }
+  .banner_stack { flex: 1; min-width: 0; height: 100%; aspect-ratio: auto; gap: 5px; border-radius: 11px; }
+  .banner_stack_img { height: 55%; }
+  .banner_stack_article { width: auto; font-size: .68rem; }
+  .banner_right { display: none; width: 100%; height: clamp(205px,64vw,280px); margin-top: 12px; background-position: center; background-size: contain; }
+
+  .offers { display: flex; flex-direction: column; align-items: stretch; width: 100%; height: auto; aspect-ratio: auto; padding: 42px 18px; }
+  .offers_article_block { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 100%; height: auto; margin: 0 0 22px; }
+  .offers_article_left_block, .offers_article_right_block { width: 100%; height: auto; align-items: flex-start; }
+  .offers_article_left { height: auto; margin-bottom: 7px; font-size: .8rem; }
+  .offers_title_left { height: auto; font-size: clamp(1.9rem,8vw,2.35rem); line-height: 1.2; }
+  .offers_article_right { width: 100%; height: auto; justify-content: flex-start; margin-top: 10px; font-size: .83rem; line-height: 1.5; }
+  .offers_blocks_block { display: flex; flex-direction: column; align-items: stretch; width: 100%; height: auto; gap: 10px; }
+  .offers_blocks_block > *, .offers_first_block, .offers_second_block { display: grid; grid-template-columns: minmax(0,1fr); width: 100%; height: auto; gap: 10px; }
+  .offers_block { width: 100%; min-height: 104px; height: auto; padding: 12px 10px; border-radius: 14px; }
+  .offers_svg_block { width: 22%; flex: 0 0 22%; }
+  .offers_svg { width: 58%; max-width: 54px; }
+  .offers_svg_article_block { width: 63%; padding: 5px 0; }
+  .offers_svg_article_top { height: auto; min-height: 28px; align-items: center; font-size: .9rem; line-height: 1.25; }
+  .offers_svg_article_bottom { height: auto; padding-top: 5px; font-size: .73rem; line-height: 1.4; }
+  .offers_svg_right { width: 10%; }
+
+  .about_me_block { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; width: 100%; min-height: 0; height: auto; padding: 42px 18px; aspect-ratio: auto; }
+  .about_me_left { width: 100%; height: auto; padding: 0; align-items: flex-start; }
+  .about_me_title_article { width: 100%; height: auto; margin: 0 0 7px; padding: 0; font-size: .8rem; }
+  .about_me_title { width: 100%; height: auto; font-size: clamp(1.9rem,8vw,2.35rem); line-height: 1.2; }
+  .about_me_article_block { width: 100%; height: auto; margin-top: 15px; gap: 12px; font-size: .85rem; line-height: 1.6; }
+  .about_me_article_one, .about_me_article_two { display: block; width: 100%; height: auto; }
+  .about_me_article_one br, .about_me_article_two br, .projects_article br { display: none; }
+  .about_me_line_block { height: auto; margin-top: 18px; }
+  .about_me_line { width: 48px; height: 2px; }
+  .about_me_right { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 205px; height: auto; margin-top: 22px; }
+  .about_me_stack_block { position: relative; width: min(100%,340px); height: auto; aspect-ratio: 2 / 1; margin: 0; padding: 13px; border-radius: 17px; }
+  .about_me_stack_article { height: 30%; font-size: .9rem; }
+  .about_me_stack { height: 65%; }
+  .about_me_stack_one { gap: 5px; }
+  .about_me_stack_one_img { height: 55%; }
+  .about_me_stack_one_article { height: auto; font-size: .72rem; }
+
+  .projects { display: flex; flex-direction: column; width: 100%; min-height: 0; height: auto; aspect-ratio: auto; padding: 42px 18px; }
+  .projects_article_block { width: 100%; height: auto; }
+  .projects_article { width: 100%; height: auto; margin-top: 14px; font-size: .85rem; line-height: 1.6; }
+  .projects_button_block { width: 100%; height: auto; margin-top: 18px; }
+  .projects_button { width: min(190px,100%); min-height: 43px; height: auto; padding: 8px 12px; font-size: .78rem; }
+  .projects_img_block {display: none; width: 100%; min-height: 220px; height: clamp(220px,65vw,310px); margin-top: 14px; background-position: center; background-size: contain; }
+
+  .contact { position: relative; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; width: 100%; min-height: 0; height: auto; aspect-ratio: auto; padding: 42px 18px; background: #080b12; isolation: isolate; z-index: 0; }
+  .contact::before { z-index: -1; opacity: .2; pointer-events: none; }
+  .contact_article_block { position: relative; z-index: 1; width: 100%; height: auto; padding: 0; align-items: flex-start; }
+  .contact_title_article {display: none; width: 100%; height: auto; margin: 0 0 7px; padding: 0; font-size: .8rem; }
+  .contact_title { display: flex; align-items: center; justify-content: center; width: 100%; height: auto; margin: 0; font-size: clamp(1.9rem,8vw,2.35rem); line-height: 1.2; white-space: pre;; }
+  .contact_article {display: flex; align-items: center; justify-content: center; width: 100%; height: auto; margin-top: 12px; font-size: .85rem; }
+  .contact_img {display: none; position: relative; z-index: 1; width: 100%; height: clamp(150px,48vw,220px); margin-top: 8px; background-position: center; background-size: contain; }
+  .contact_button_block { position: relative; z-index: 2; display: flex; width: 100%; height: auto; margin-top: 12px; }
+  .contact_button { width: min(280px,100%); min-height: 52px; height: auto; padding: 10px 15px; border-radius: 13px; margin-top: 1em; }
+  .contact_button_article { width: auto; height: auto; margin-left: 0; font-size: .85rem; white-space: nowrap; }
+
+  footer { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 0; height: auto; aspect-ratio: auto; padding: 24px 18px; gap: 18px; }
+  .footer_logo { width: auto; height: auto; font-size: 1.55rem; }
+  footer .header_nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; width: 100%; height: auto; gap: 12px 20px; }
+  .footer_nav { width: auto; height: auto; font-size: .72rem; }
+  .footer_article { width: 100%; height: auto; font-size: .68rem; text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .header_social_button { padding: 0 8px; font-size: .65rem; }
+  .banner, .offers, .about_me_block, .projects, .contact { padding-left: 15px; padding-right: 15px; }
+  .banner_stack_list { gap: 5px; }
+  .banner_stack_article { font-size: .62rem; }
+  .offers_block { padding-left: 7px; padding-right: 7px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

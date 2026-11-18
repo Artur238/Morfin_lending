@@ -1,0 +1,145 @@
+/* MORFIN — subtle motion layer. Layout and existing styles are untouched. */
+
+/* First-screen entrance */
+@keyframes morfin-hero-enter {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes morfin-soft-pulse {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(19, 217, 154, 0.45);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(19, 217, 154, 0.82);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .banner_left {
+        animation: morfin-hero-enter 750ms cubic-bezier(.2, .7, .2, 1) both;
+    }
+
+    .banner_right {
+        animation: morfin-hero-enter 900ms cubic-bezier(.2, .7, .2, 1) 120ms both;
+    }
+
+    .banner_online_circle {
+        animation: morfin-soft-pulse 2.8s ease-in-out infinite;
+    }
+
+    /* Scroll reveal: JS adds .motion-reveal and .is-visible. */
+    .motion-reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+            opacity 650ms ease,
+            transform 650ms cubic-bezier(.2, .7, .2, 1);
+        transition-delay: var(--motion-delay, 0ms);
+        will-change: opacity, transform;
+    }
+
+    .motion-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        will-change: auto;
+    }
+
+    /* Small, restrained hover responses */
+    .nav_link {
+        transition: color 220ms ease, transform 220ms ease;
+    }
+
+    .nav_link:hover {
+        color: #52a4ff;
+        transform: translateY(-2px);
+    }
+
+    .header_social_button,
+    .banner_button,
+    .projects_button,
+    .contact_button {
+        transition:
+            transform 240ms ease,
+            box-shadow 240ms ease,
+            border-color 240ms ease,
+            background-color 240ms ease;
+    }
+
+    .header_social_button:hover,
+    .banner_button:hover,
+    .projects_button:hover,
+    .contact_button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 11px 30px rgba(20, 117, 255, .25);
+    }
+
+    .header_social_button:hover{
+        background: linear-gradient(115deg, rgb(20, 117, 255), rgb(38, 124, 255) 65%, rgb(23, 100, 232));
+    }
+
+    .offers_block {
+        transition:
+            transform 260ms ease,
+            border-color 260ms ease,
+            box-shadow 260ms ease;
+    }
+
+    .offers_block:hover {
+        transform: translateY(-4px);
+        border-color: rgba(63, 145, 255, .48);
+        box-shadow: 0 12px 30px rgba(0, 55, 140, .16);
+    }
+
+    .banner_stack {
+        transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            background-color 220ms ease;
+    }
+
+    .banner_stack:hover {
+        transform: translateY(-3px);
+        border-color: rgba(82, 164, 255, .45);
+    }
+
+    .about_me_stack_block {
+        transition: border-color 260ms ease, box-shadow 260ms ease;
+    }
+
+    .about_me_stack_block:hover {
+        border-color: rgba(82, 164, 255, .42);
+        box-shadow: 0 22px 64px rgba(20, 91, 210, .16);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner_left,
+    .banner_right,
+    .banner_online_circle {
+        animation: none !important;
+    }
+
+    .motion-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .nav_link,
+    .header_social_button,
+    .banner_button,
+    .projects_button,
+    .contact_button,
+    .offers_block,
+    .banner_stack,
+    .about_me_stack_block {
+        transition: none !important;
+    }
+}

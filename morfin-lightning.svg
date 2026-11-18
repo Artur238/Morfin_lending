@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="bolt" x1="30" y1="12" x2="101" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75C8FF"/>
+      <stop offset=".42" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="44" y1="18" x2="81" y2="83" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-50%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.06  0 0 0 0 0.39  0 0 0 0 1  0 0 0 .8 0" result="blueGlow"/>
+      <feMerge><feMergeNode in="blueGlow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path d="M75.8 8.5 25.5 72.2c-1.2 1.5-.2 3.8 1.8 3.8h28.1l-8.2 42.7c-.5 2.5 2.6 4 4.2 2L103 54.3c1.3-1.6.2-3.9-1.8-3.9H72.9l7.3-39.8c.5-2.5-2.8-4-4.4-2.1Z"
+      fill="url(#bolt)" stroke="#57B5FF" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="m72.7 18.7-34.4 44h25.6l-6.1 31.8 32.2-39.8H62.6l10.1-36Z"
+      fill="url(#shine)" opacity=".3"/>
+    <path d="m75.8 8.5-21 43.2" stroke="#BCE8FF" stroke-opacity=".55" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+</svg>

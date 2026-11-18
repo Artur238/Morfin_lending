@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="layerTop" x1="27" y1="24" x2="101" y2="68" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#75C8FF"/>
+      <stop offset=".44" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="layerMiddle" x1="25" y1="45" x2="103" y2="89" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#63BAFF"/>
+      <stop offset=".48" stop-color="#217DFA"/>
+      <stop offset="1" stop-color="#064BCF"/>
+    </linearGradient>
+    <linearGradient id="layerBottom" x1="25" y1="67" x2="103" y2="111" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55AEFF"/>
+      <stop offset=".5" stop-color="#1971EF"/>
+      <stop offset="1" stop-color="#0642BB"/>
+    </linearGradient>
+    <linearGradient id="topShine" x1="38" y1="27" x2="83" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="0 0 0 0 0.06  0 0 0 0 0.39  0 0 0 0 1  0 0 0 .78 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#blueGlow)" stroke-linejoin="round">
+    <!-- Bottom layer -->
+    <path d="M15.5 78.2 59.8 56.5a9.5 9.5 0 0 1 8.4 0l44.3 21.7c3.5 1.7 3.5 6.7 0 8.4L68.2 108.3a9.5 9.5 0 0 1-8.4 0L15.5 86.6c-3.5-1.7-3.5-6.7 0-8.4Z"
+      fill="url(#layerBottom)" stroke="#54B4FF" stroke-width="2.1"/>
+    <path d="m18.8 83.1 44.6 21.8 46-21.8" stroke="#B9E5FF" stroke-opacity=".38" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Middle layer -->
+    <path d="M15.5 56.2 59.8 34.5a9.5 9.5 0 0 1 8.4 0l44.3 21.7c3.5 1.7 3.5 6.7 0 8.4L68.2 86.3a9.5 9.5 0 0 1-8.4 0L15.5 64.6c-3.5-1.7-3.5-6.7 0-8.4Z"
+      fill="url(#layerMiddle)" stroke="#63BCFF" stroke-width="2.1"/>
+    <path d="m18.8 61.1 44.6 21.8 46-21.8" stroke="#D1EEFF" stroke-opacity=".42" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Top layer -->
+    <path d="M15.5 34.2 59.8 12.5a9.5 9.5 0 0 1 8.4 0l44.3 21.7c3.5 1.7 3.5 6.7 0 8.4L68.2 64.3a9.5 9.5 0 0 1-8.4 0L15.5 42.6c-3.5-1.7-3.5-6.7 0-8.4Z"
+      fill="url(#layerTop)" stroke="#78C9FF" stroke-width="2.2"/>
+    <path d="M22 34.5 60.9 15.5a7 7 0 0 1 6.2 0l35.8 17.6-39.8 19.5L22 34.5Z"
+      fill="url(#topShine)" opacity=".52"/>
+    <path d="m20.2 37.9 43.8 21.5 43.8-21.5" stroke="#D8F2FF" stroke-opacity=".55" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+</svg>

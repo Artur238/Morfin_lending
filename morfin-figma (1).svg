@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="365" height="547" viewBox="0 0 365 547">
+  <defs>
+    <linearGradient id="blueA" x1="16" y1="0" x2="182" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset="0.52" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="blueB" x1="182" y1="0" x2="365" y2="182" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset="0.52" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="blueC" x1="0" y1="182" x2="182" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset="0.52" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="blueD" x1="182" y1="182" x2="365" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset="0.52" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+    <linearGradient id="blueE" x1="0" y1="365" x2="182" y2="547" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#75C8FF"/>
+      <stop offset="0.52" stop-color="#278BFF"/>
+      <stop offset="1" stop-color="#0752E8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Original five-part silhouette preserved; only the palette is changed. -->
+  <!-- Top-left segment -->
+  <path d="M91 0H182V182H91A91 91 0 0 1 91 0Z" fill="url(#blueA)"/>
+
+  <!-- Top-right segment -->
+  <path d="M182 0H274A91 91 0 0 1 274 182H182V0Z" fill="url(#blueB)"/>
+
+  <!-- Middle-left segment -->
+  <path d="M91 182H182V365H91A91 91 0 0 1 91 182Z" fill="url(#blueC)"/>
+
+  <!-- Middle-right circular segment -->
+  <circle cx="273.5" cy="273.5" r="91.5" fill="url(#blueD)"/>
+
+  <!-- Bottom-left segment -->
+  <path d="M91 365H182V456A91 91 0 0 1 0 456A91 91 0 0 1 91 365Z" fill="url(#blueE)"/>
+</svg>
