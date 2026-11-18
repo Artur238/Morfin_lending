@@ -150,7 +150,7 @@ header, .banner, .offers, .about_me_block, footer { width: 100%; }
   .contact_img {display: none; position: relative; z-index: 1; width: 100%; height: clamp(150px,48vw,220px); margin-top: 8px; background-position: center; background-size: contain; }
   .contact_button_block { position: relative; z-index: 2; display: flex; width: 100%; height: auto; margin-top: 12px; }
   .contact_button { width: min(280px,100%); min-height: 52px; height: auto; padding: 10px 15px; border-radius: 13px; margin-top: 1em; }
-  .contact_button_article { width: auto; height: auto; margin-left: 0; font-size: .85rem; white-space: nowrap; }
+  .contact_button_article { width: auto; height: auto; margin-left: 0.3em; font-size: .85rem; white-space: nowrap; }
 
   footer { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-height: 0; height: auto; aspect-ratio: auto; padding: 24px 18px; gap: 18px; }
   .footer_logo { width: auto; height: auto; font-size: 1.55rem; }
