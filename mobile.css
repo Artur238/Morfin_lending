@@ -54,7 +54,7 @@ header, .banner, .offers, .about_me_block, footer { width: 100%; }
   .projects_img_block { background-size: contain; }
 
   .contact { min-height: 260px; aspect-ratio: auto; }
-  .contact_article_block { width: 34%; padding-left: 0; }
+  .contact_article_block { width: 34%; padding-left: 0.25em; }
   .contact_img { width: 58%; background-position: center; background-size: contain; }
   .contact_button_block { width: 40%; }
   .contact_button { width: 85%; min-height: 52px; }
