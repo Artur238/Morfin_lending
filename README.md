@@ -30,4 +30,4 @@
 
 ---
 
-\<p align="center">   Developed by \<b>Morfin\</b> \</p>
+<p align="center">   Developed by <b>Morfin</b> </p>
